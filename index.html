@@ -1,3 +1,117 @@
-<h1>Hello world!</h1>
-<h2>Test</h2>
-Text
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сайт в разработке</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #0d1117;
+            color: #c9d1d9;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            overflow: hidden;
+        }
+
+        .container {
+            text-align: center;
+            padding: 2rem;
+            max-width: 600px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .icon-container {
+            margin-bottom: 2rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        /* Анимированная иконка шестеренки */
+        .gear {
+            width: 80px;
+            height: 80px;
+            fill: #58a6ff;
+            animation: spin 4s linear infinite;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: #f0f6fc;
+            margin-bottom: 1rem;
+            font-weight: 600;
+            letter-spacing: -0.5px;
+        }
+
+        p {
+            font-size: 1.1rem;
+            color: #8b949e;
+            line-height: 1.6;
+            margin-bottom: 2rem;
+        }
+
+        /* Декоративная линия */
+        .divider {
+            width: 60px;
+            height: 4px;
+            background-color: #238636;
+            margin: 0 auto 2rem auto;
+            border-radius: 2px;
+        }
+
+        .footer {
+            font-size: 0.9rem;
+            color: #484f58;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* Адаптивность для мобильных экранов */
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+            p {
+                font-size: 1rem;
+            }
+            .gear {
+                width: 64px;
+                height: 64px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="icon-container">
+            <!-- SVG Иконка шестеренки -->
+            <svg class="gear" viewBox="0 0 24 24" xmlns="http://w3.org">
+                <path d="M12 15.5c-1.93 0-3.5-1.57-3.5-3.5s1.57-3.5 3.5-3.5 3.5 1.57 3.5 3.5-1.57 3.5-3.5 3.5zm0-5c-.83 0-1.5.67-1.5 1.5s.67 1.5 1.5 1.5 1.5-.67 1.5-1.5-.67-1.5-1.5-1.5z"/>
+                <path d="M22.93 11.25l-2.03-.34c-.13-.53-.33-1.03-.58-1.51l1.32-1.58c.24-.29.21-.73-.07-1.01l-1.39-1.39c-.28-.28-.72-.25-1.01-.02l-1.58 1.32c-.48-.25-.99-.45-1.51-.58l-.34-2.03c-.06-.37-.39-.66-.77-.66h-1.97c-.38 0-.71.28-.77.66l-.34 2.03c-.53.13-1.03.33-1.51.58l-1.58-1.32c-.29-.24-.73-.21-1.01.02l-1.39 1.39c-.28.28-.25.72-.02 1.01l1.32 1.58c-.25.48-.45.99-.58 1.51l-2.03.34c-.37.06-.66.39-.66.77v1.97c0 .38.28.71.66.77l2.03.34c.13.53.33 1.03.58 1.51l-1.32 1.58c-.24.29-.21.73.07 1.01l1.39 1.39c.28.28.72.25 1.01.02l1.58-1.32c.48.25.99.45 1.51.58l.34 2.03c.06.37.39.66.77.66h1.97c.38 0 .71-.28.77-.66l.34-2.03c.53-.13 1.03-.33 1.51-.58l1.58 1.32c.29.24.73.21 1.01-.02l1.39-1.39c.28-.28.25-.72.02-1.01l-1.32-1.58c.25-.48.45-.99.58-1.51l2.03-.34c.37-.06.66-.39.66-.77v-1.97c0-.38-.28-.71-.66-.77zM21 13.75c0 .13-.1.24-.22.26l-2.31.39c-.18.66-.46 1.28-.84 1.84l1.5 1.81c.08.1.07.24-.02.33l-1.39 1.39c-.09.09-.23.1-.33.02l-1.81-1.5c-.56.38-1.18.66-1.84.84l-.39 2.31c-.02.12-.13.22-.26.22h-1.97c-.13 0-.24-.1-.26-.22l-.39-2.31c-.66-.18-1.28-.46-1.84-.84l-1.81 1.5c-.1.08-.24.07-.33-.02l-1.39-1.39c-.09-.09-.1-.23-.02-.33l1.5-1.81c-.38-.56-.66-1.18-.84-1.84l-2.31-.39c-.12-.02-.22-.13-.22-.26v-1.97c0-.13.1-.24.22-.26l2.31-.39c-.18-.66.46-1.28.84-1.84l-1.5-1.81c-.08-.1-.07-.24.02-.33l1.39-1.39c.09-.09.23-.1.33-.02l1.81 1.5c.56-.38 1.18-.66 1.84-.84l.39-2.31c.02-.12.13-.22.26-.22h1.97c-.13 0 .24.1.26.22l.39 2.31c.66.18 1.28.46 1.84.84l1.81-1.5c.1-.08.24-.07.33.02l1.39 1.39c.09.09.1.23.02.33l-1.5 1.81c.38.56.66 1.28.84 1.84l2.31.39c.12.02.22.13.22.26v1.97z"/>
+            </svg>
+        </div>
+        
+        <h1>Сайт находится в разработке</h1>
+        <div class="divider"></div>
+        <p>Мы усердно работаем над созданием чего-то потрясающего. Проект будет запущен совсем скоро, заглядывайте позже!</p>
+        
+        <div class="footer">
+            &copy; 2026 Все права защищены
+        </div>
+    </div>
+
+</body>
+</html>
